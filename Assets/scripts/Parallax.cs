@@ -10,7 +10,7 @@ public class FitToCamera : MonoBehaviour
 
     // The intensity of the parallax effect
     public float parallaxEffect;
-//assdade
+//assdadesdfhnuijklo;vz
     void Start()
     {
         // Store the initial x position of the GameObject
