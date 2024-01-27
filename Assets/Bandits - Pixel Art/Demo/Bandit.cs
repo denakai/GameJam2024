@@ -13,6 +13,8 @@ public class Bandit : MonoBehaviour {
     private bool                m_combatIdle = false;
     private bool                m_isDead = false;
 
+    private bool                movement = false;
+
     // Use this for initialization
     void Start () {
         m_animator = GetComponent<Animator>();
@@ -22,6 +24,10 @@ public class Bandit : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (!movement) {
+            return;
+        }
+        
         //Check if character just landed on the ground
         if (!m_grounded && m_groundSensor.State()) {
             Debug.Log("Grounded");
@@ -94,5 +100,9 @@ public class Bandit : MonoBehaviour {
         //Idle
         else
             m_animator.SetInteger("AnimState", 0);
+    }
+
+    public void setMovement(bool m) {
+        movement = m;
     }
 }

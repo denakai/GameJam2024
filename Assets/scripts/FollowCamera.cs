@@ -12,6 +12,7 @@ public class FollowCamera : MonoBehaviour
 
     [SerializeField] private Transform playerTarget;
     [SerializeField] private Transform mainMenuTarget;
+    [SerializeField] private Bandit bandit;
 
     private Transform currentTarget;
 
@@ -31,8 +32,10 @@ public class FollowCamera : MonoBehaviour
     public void switchTarget() {
         if (currentTarget == playerTarget) {
             currentTarget = mainMenuTarget;
+            bandit.setMovement(false);
         } else {
             currentTarget = playerTarget;
+            bandit.setMovement(true);
         }
     }
 }
