@@ -9,6 +9,7 @@ public class testCamera : MonoBehaviour
     public FollowCamera followCamera; // Reference to the FollowCamera script component.
     public Button button;             // Reference to a UI Button component.
     public Canvas gameCanvas;         // Reference to a Canvas component.
+    
 
     // playGame is a public method which can be linked to UI events (like button clicks) in the Unity Editor.
     public void playGame()
