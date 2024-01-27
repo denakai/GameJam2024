@@ -18,7 +18,6 @@ public class FitToCamera : MonoBehaviour
 
         transform.position = new Vector3(startpos + dist, 1.4f, transform.position.z);
 
-
         if (temp > startpos + length)
         {
             startpos += length * 2;
